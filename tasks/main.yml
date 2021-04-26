@@ -3,6 +3,7 @@
   package:
     name: "{{ pip_package }}"
     state: present
+  when: install_pip | bool
 
 - name: Ensure pip_install_packages are installed.
   pip:
